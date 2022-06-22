@@ -1,0 +1,70 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnm0CqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+        <link href="https://fonts.googleapis.com/css?family=Candal|Lora&display=swap" rel="stylesheet">
+</head>
+
+<header>
+    <div class="logo">
+        <h1 class="logo-text"><span>Covid-19</span>Dashboard</h1>
+    </div>
+    <i class="fa fa-bars menu-toggle"></i>
+    <ul class="nav">
+        <!-- <li>
+            <a class="logout" (click)="logout()" style="cursor: pointer">
+               <b> SIGN OUT</b>
+            </a>
+        </li> -->
+    </ul>
+</header>
+
+<div id="invoice">
+    <div class="invoice overflow-auto">
+        <div style="min-width: 600px">
+            <main>
+                <div class="row contacts">  
+                    <div class="col invoice-details">
+                        <h1 class="invoice-id">COVID-19 CASES</h1>
+                    </div>
+                </div>
+
+              <table border="0" cellspacing="0" cellpadding="0">
+                <thead></thead>
+                <tr>
+                  <th><b>CASES</b></th>
+                  <th><b>ACTIVE CASES</b></th>
+                  <th><b>TODAY CASES</b></th>
+                  <th><b>DEATHS</b></th>
+                </tr>
+
+                <tbody>
+                <tr *ngFor="let history of allTheHistory">
+                  <td class="no">{{history.active}}</td>
+                  <td class="unit">{{history.cases}}</td>
+                  <td class="unit">{{history.todayCases}}</td>
+                  <td class="unit">{{history.deaths}}</td>
+                </tr>
+                </tbody>
+              </table><br>
+
+                <div class="notices">
+                    <div>NOTICE :</div>
+                    <div class="notice">The Dashboard will provide you updates whenever new cases are available.</div>
+                </div>
+            </main> 
+            <footer>
+                <b>© 2020. All rights reserved.</b>
+            </footer>
+        </div>
+        <div></div>
+    </div>
+</div>
